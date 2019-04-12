@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.zhilutec</groupId>
+        <artifactId>firecontrol</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>fc-common</artifactId>
+    <packaging>pom</packaging>
+
+    <description>公共聚合模块</description>
+
+    <modules>
+        <module>fc-common-bom</module>
+        <module>fc-common-core</module>
+        <module>fc-common-swagger</module>
+        <module>fc-common-data</module>
+        <module>fc-common-gateway</module>
+        <module>fc-common-job</module>
+        <module>fc-common-log</module>
+        <module>fc-common-minio</module>
+        <module>fc-common-security</module>
+        <module>fc-common-transaction</module>
+    </modules>
+
+    <!--发布到私服配置-->
+    <distributionManagement>
+        <repository>
+            <id>zhilutec-fc</id>
+            <name>zhilutec-fc Release</name>
+            <url>http://192.168.10.6:8081/repository/zhilutec-fc/</url>
+        </repository>
+    </distributionManagement>
+</project>
